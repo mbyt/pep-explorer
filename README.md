@@ -6,13 +6,20 @@ An easy to use online explorer for Python Enhancement Proposals
 
 ## Updating the index
 
-The pep/ directory is a git submodule for the actual PEP repository on Github
+The index is automatically updated by github actions every day 5:30 o'clock. In case you nevertheless want to update it, do:
+
+(1) The pep/ directory is a git submodule for the actual PEP repository on Github
 
 ```bash
 cd peps
-git pull
+git pull --rebase
 cd ..
 python3 genindex.py
+```
+
+(2) Then serve locally via:
+```bash
+python3 -m http.server
 ```
 
 ## Contributions
